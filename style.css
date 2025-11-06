@@ -1,0 +1,276 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #0a0a0a;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+/* Header */
+.site-header {
+  background: rgba(0, 0, 0, 0.85);
+  padding: 0.8rem 1rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.brand {
+  display: flex;
+  align-items: center;
+}
+.logo-hmdm {
+  width: 45px;
+  margin-right: 10px;
+}
+.brand-text h1 {
+  font-size: 1.3rem;
+  margin: 0;
+  color: white;
+}
+.brand-text .year { color: #ff2e2e; }
+
+.socials img {
+  width: 22px;
+  margin-left: 10px;
+  filter: brightness(0) invert(1);
+  transition: 0.3s;
+}
+.socials img:hover {
+  transform: scale(1.2);
+  filter: hue-rotate(-10deg) saturate(10);
+}
+
+/* Hero */
+.hero {
+  height: 100vh;
+  background: url('BACKGROUND.jpg') center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero-overlay {
+  background: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+}
+.hero-sub {
+  color: #ff2e2e;
+  margin-bottom: 1rem;
+}
+.btn {
+  padding: 0.7rem 1.5rem;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s;
+  margin: 0.5rem;
+}
+.btn.primary { background: #ff2e2e; border: none; color: #fff; }
+.btn.ghost { border: 2px solid #ff2e2e; color: #ff2e2e; background: transparent; }
+.btn:hover { transform: scale(1.05); }
+
+/* About */
+.about-card {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+.about-card img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 20px;
+}
+
+/* Footer */
+.site-footer {
+  background: #111;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+.footer-inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+.footer-photo {
+  width: 150px;
+  border-radius: 10px;
+}
+.footer-socials img {
+  width: 28px;
+  margin: 0.5rem;
+  transition: 0.3s;
+}
+.footer-socials img:hover { transform: scale(1.2); }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .carousel-slide { min-width: 80%; }
+  .hero-title { font-size: 1.6rem; }
+}
+#vision {
+  position: relative;
+  text-align: center;
+  padding: 80px 20px;
+  color: white;
+  overflow: hidden;
+}
+
+/* Foto transparan sebagai latar belakang */
+.vision-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.3; /* ubah angka ini untuk tingkat transparansi (0.1–1) */
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+/* Teks di atas foto */
+.vision-text {
+  position: relative;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.5); /* opsional: tambahkan overlay gelap agar teks lebih jelas */
+  padding: 30px;
+  border-radius: 12px;
+  display: inline-block;
+  text-align: left;
+}
+
+.vision-text h3 {
+  margin-top: 10px;
+  color: #8f0707;
+}
+/* Quick Stats */
+.quick-stats {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 30px 0;
+  text-align: center;
+}
+.quick-stats div strong {
+  display: block;
+  font-size: 2rem;
+  color: #8f0707;
+}
+.quick-stats div span {
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+/* Quick Stats */
+.quick-stats {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 30px 0;
+  text-align: center;
+}
+.quick-stats div strong {
+  display: block;
+  font-size: 2rem;
+  color: #8f0707;
+}
+.quick-stats div span {
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+/* Section People */
+#people {
+  text-align: center;
+  padding: 60px 20px;
+  background: #111;
+  color: #fff;
+  overflow: hidden;
+}
+
+/* Carousel Container */
+.carousel-container {
+  position: relative;
+  overflow: hidden;
+  width: 95%;
+  margin: 0 auto 20px;
+}
+
+/* Track yang bergerak otomatis */
+.carousel-track {
+  display: flex;
+  gap: 25px;
+  animation: scroll 30s linear infinite;
+}
+
+/* Gaya foto portrait (seperti IG post 1080x1350) */
+.carousel-slide {
+  flex: 0 0 auto;
+  width: 270px; /* perbandingan 4:5 dari 1080x1350 */
+  height: 337.5px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.15);
+  transition: transform 0.4s;
+}
+
+.carousel-slide:hover {
+  transform: scale(1.05);
+}
+
+/* Gambar agar tidak gepeng */
+.carousel-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 20px;
+}
+
+/* Animasi scroll otomatis */
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+  .carousel-slide {
+    width: 200px;
+    height: 250px;
+  }
+}
+.footer-socials {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 20px;
+}
+
+.footer-socials a img {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s, opacity 0.3s;
+  filter: brightness(0) invert(1); /* putih di background gelap */
+}
+
+.footer-socials a:hover img {
+  transform: scale(1.2);
+  opacity: 0.8;
+}
